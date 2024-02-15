@@ -7,5 +7,10 @@ directory_name="negpod_id-q1"
 mkdir -p "$directory_name"
 
 # Move all 4 files from question 1 to the directory
-mv main.sh Students-list_1023.txt Select-emails.sh student-emails.txt "$directory_name"
+mv main.sh "$directory_name"
+mv students-list_1023.txt "$directory_name"
+mv Select-emails.sh "$directory_name"
+mv student-emails.txt "$directory_name"
+
+echo "Files moved successfully to $directory_name directory."
 
