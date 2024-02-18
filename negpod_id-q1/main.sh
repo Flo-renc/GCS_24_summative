@@ -11,12 +11,6 @@ create_student_record() {
     echo "$email, $age, $student_id" >> Students-list_1023.txt
 }
 
-# Function to save student record to file
-save_student_record() {
-    # Write student record to file
-    echo "$1" >> Students-list_1023.txt
-}
-
 # Function to view all students
 view_all_students() {
     # Display contents of Students-list_1023.txt
