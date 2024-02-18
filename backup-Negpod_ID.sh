@@ -1,14 +1,21 @@
 #!/bin/bash
 
-# Define remote server details
-remote_host="64293e56bc62.3a2627c1.alu-cod.online"
-remote_username="64293e56bc62"
-remote_password="328d3b338a4ced526c9a"
-remote_backup_location="/summative/1023-2024j"
+#back of directory
 
-# Backup directory name
-backup_directory="negpod_id-q1"
+# Configuration
+SOURCE_DIR="Negpod_24-q1"
+DEST_HOST="64293e56bc62.3a2627c1.alu-cod.online"
+DEST_USER="64293e56bc62"
+DEST_DIR="/summative/1023-2024j"
+PASSWORD="328d3b338a4ced526c9a"
 
-# Copy directory to remote server
-scp -r "$backup_directory" "$remote_username"@"$remote_host":"$remote_backup_location"
+sshpass -p "$PASSWORD" scp -o StrictHostKeyChecking=no -r "$SOURCE_DIR" "$DEST_USER@$DEST_HOST:$DEST_DIR"
+
+if [ $? -ne 0 ]; then
+  echo "Failed to copy directory"
+  exit 1
+else 
+  echo "Directory copied successfully"
+fi
+
 
