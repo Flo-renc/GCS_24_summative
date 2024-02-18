@@ -11,13 +11,19 @@ create_student_record() {
     echo "$email, $age, $student_id" >> Students-list_1023.txt
 }
 
+# Function to save student record to file
+save_student_record() {
+    # Write student record to file
+    echo "$1" >> Students-list_1023.txt
+}
+
 # Function to view all students
 view_all_students() {
     # Display contents of Students-list_1023.txt
     cat Students-list_1023.txt
 }
 
-# Function to delete a student record by id
+# Function to delete a student record
 delete_student_record() {
     # Prompt user for student ID to delete
     read -p "Enter student ID to delete: " student_id
@@ -26,7 +32,6 @@ delete_student_record() {
 }
 
 # Function to update a student record
-# This function takes in the student id and update there records with the new input
 update_student_record() {
     # Prompt user for student ID to update
     read -p "Enter student ID to update: " student_id
