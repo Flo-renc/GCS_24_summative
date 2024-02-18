@@ -17,7 +17,7 @@ view_all_students() {
     cat Students-list_1023.txt
 }
 
-# Function to delete a student record
+# Function to delete a student record by id
 delete_student_record() {
     # Prompt user for student ID to delete
     read -p "Enter student ID to delete: " student_id
@@ -26,6 +26,7 @@ delete_student_record() {
 }
 
 # Function to update a student record
+# This function takes in the student id and update there records with the new input
 update_student_record() {
     # Prompt user for student ID to update
     read -p "Enter student ID to update: " student_id
