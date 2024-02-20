@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 students' registration record keeping application
 =======
+=======
+>>>>>>> b062be3bd916158318f836d218c7cb52168e266a
 Student Registration System
 This is a simple shell script application for managing student records in the ALU registration system. The application allows users to perform various operations such as creating, viewing, updating, and deleting student records. Additionally, it provides functionality to select and save student emails to a separate file.
 
@@ -32,4 +35,7 @@ SEARCH AND SORTING INTO A FILE
     Saves the extracted email addresses to the student-emails.txt file.
     Usage
 
+<<<<<<< HEAD
+>>>>>>> b062be3bd916158318f836d218c7cb52168e266a
+=======
 >>>>>>> b062be3bd916158318f836d218c7cb52168e266a
