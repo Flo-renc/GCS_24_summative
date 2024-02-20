@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 students' registration record keeping application
 =======
 =======
@@ -8,6 +9,12 @@ Student Registration System
 This is a simple shell script application for managing student records in the ALU registration system. The application allows users to perform various operations such as creating, viewing, updating, and deleting student records. Additionally, it provides functionality to select and save student emails to a separate file.
 
 Files Included
+=======
+Student Registration System
+This is a simple shell script application for managing student records in the ALU registration system. The application allows users to perform various operations such as creating, viewing, updating, and deleting student records. Additionally, it provides functionality to select and save student emails to a separate file.
+
+Files Included:
+>>>>>>> 85b405aa6f01379058224a326c429b050c9bac11
 main.sh: This is the main script file that implements the student registration system. It contains functions for creating, saving, viewing, deleting, and updating student records. The user interacts with this script to perform operations on student records.
 select-emails.sh: This script is responsible for selecting and extracting email addresses from the student records file. It saves the extracted email addresses to a separate file named student-emails.txt.
 Students-list_1023.txt: This file stores the student records in a comma-separated format. Each line represents a single student record with fields for email, age, and student ID.
@@ -36,6 +43,9 @@ SEARCH AND SORTING INTO A FILE
     Usage
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> b062be3bd916158318f836d218c7cb52168e266a
 =======
 >>>>>>> b062be3bd916158318f836d218c7cb52168e266a
+=======
+>>>>>>> 85b405aa6f01379058224a326c429b050c9bac11
