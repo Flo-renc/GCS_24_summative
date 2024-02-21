@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directory_name="negpod_id-q1"
+directory_name="Negpod_24-q1"
 
 # Create the directory if it doesn't exist
 mkdir -p "$directory_name"
