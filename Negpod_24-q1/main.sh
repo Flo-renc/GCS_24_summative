@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash:wq!
 
 # Function to create a student record
 create_student_record() {
