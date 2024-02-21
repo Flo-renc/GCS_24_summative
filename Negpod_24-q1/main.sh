@@ -1,4 +1,4 @@
-#!/bin/bash:wq!
+#!/bin/bash
 
 # Function to create a student record
 create_student_record() {
@@ -35,11 +35,25 @@ delete_student_record() {
 update_student_record() {
     # Prompt user for student ID to update
     read -p "Enter student ID to update: " student_id
+    #see if ID exists
+    if grep -q"^$student_id"students-list_1023.txt; then
+	    
     # Prompt user for new student details
-    read -p "Enter new student email: " new_email
-    read -p "Enter new student age: " new_age
+    #read -p "Enter new student id: " new_id
+    echo "enter new id" 
+    read new_id
+    #read -p "Enter new student email: " new_email
+    echo "enter new email"
+    read new_email
+    #read -p "Enter new student age: " new_age
+    echo "enter new age " read
+    new_age
     # Update student record in file
-    sed -i "s/^$student_id,.*/$new_email, $new_age, $student_id/" Students-list_1023.txt
+    #sed -i "s/^$student_id,.*/$new_email, $new_age, $student_id/" Students-list_1023.txt
+    sed -i"s/$old_record/$(echo $new_email,$new_age,$new_id)/g"students-list_1023.txt
+else
+	echo "The provided id not found. Try again"
+    fi
 }
 
 # Main menu loop
