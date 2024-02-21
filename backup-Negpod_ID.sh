@@ -1,21 +1,28 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# Backing up our directory on another server
 
-#back of directory
+# Define the remote server
+remote_server="64293e56bc62.3a2627c1.alu-cod.online"
+remote_dir="/summative/1023-2024j/"
 
-# Configuration
-SOURCE_DIR="Negpod_24-q1"
-DEST_HOST="64293e56bc62.3a2627c1.alu-cod.online"
-DEST_USER="64293e56bc62"
-DEST_DIR="/summative/1023-2024j"
-PASSWORD="328d3b338a4ced526c9a"
+#Source Directory
+source_dir="Negpod_24-q1"
 
-sshpass -p "$PASSWORD" scp -o StrictHostKeyChecking=no -r "$SOURCE_DIR" "$DEST_USER@$DEST_HOST:$DEST_DIR"
+#Backup Directory
+backup_dir="backup-Negpod_24-q1"
 
-if [ $? -ne 0 ]; then
-  echo "Failed to copy directory"
-  exit 1
-else 
-  echo "Directory copied successfully"
-fi
+#create_dir
+mkdir "$backup_dir"
+
+#copy content of source_dir
+cp -r "$source_dir" "$backup_dir"
+
+#Transfer to the remote server
+scp -r "$backup_dir" "$remote_server:$remote_dir"
+
+#Remove the backup from our sandbox
+rm -r "$backup_dir"
+
+echo "Directory backed up successfully"
 
 
