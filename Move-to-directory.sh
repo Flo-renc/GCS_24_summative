@@ -1,10 +1,14 @@
 #!/bin/bash
 
-#create directory and move files to directory
+directory_name="Negpod_24-q1"
 
-destination_dir="Negpod_24-q1"
+# Create the directory if it doesn't exist
+mkdir -p "$directory_name"
 
-mkdir -p "$destination_dir"
+# Move the files to the directory
+mv main.sh "$directory_name"
+mv students-list_1023.txt "$directory_name"
+mv select-emails.sh "$directory_name"
+mv student-emails.txt "$directory_name"
 
-mv main.sh Students-list_1023.txt Select-emails.sh student-emails.txt "$destination_dir/"
-
+echo "Files moved to $directory_name directory."
