@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-f.kabeya@gmail.com, 19, f.kabes@gmail.com
-flo@gmail.com, 14, 3009
-=======
-c.umugabeka@alustudent.com, 20, 12345
->>>>>>> 589b991d786feb2d141ea870da05cb3a3bac518d
+e.muka@alustudent.com, 18, 0889
+f.kabs@alustudent.com, 20, 5567
+c.umugabeka@alustudent.com, 20, 1234
