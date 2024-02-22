@@ -1,27 +1,14 @@
-!/usr/bin/env bash
-# Backing up our directory on another server
+#!/bin/bash
 
-# Define the remote server
-remote_server="64293e56bc62.3a2627c1.alu-cod.online"
-remote_dir="/summative/1023-2024j/"
+# Variables for remote server details
+HOST="64293e56bc62.3a2627c1.alu-cod.online"
+USERNAME="64293e56bc62"
+PASSWORD="328d3b338a4ced526c9a"
+REMOTE_DIR="/summative/1023-2024j"
+LOCAL_DIR="Negpod_24-q1" # Directory to be backed up
 
-#Source Directory
-source_dir="Negpod_24-q1"
+# Use rsync to backup the directory to the remote server
+rsync -avz -e "sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no" "$LOCAL_DIR" "$USERNAME@$HOST:$REMOTE_DIR"
 
-#Backup Directory
-backup_dir="backup-Negpod_24-q1"
-
-#create_dir
-mkdir "$backup_dir"
-
-#copy content of source_dir
-cp -r "$source_dir" "$backup_dir"
-
-#Transfer to the remote server
-scp -r "$backup_dir" "$remote_server:$remote_dir"
-
-#Remove the backup from our sandbox
-rm -r "$backup_dir"
-
-echo "Directory backed up successfully"
+echo "Backup completed successfully."
 
