@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 e.muka@alustudent.com
 f.kabs@alustudent.com
 c.umugabeka@alustudent.com
+=======
+<<<<<<< HEAD
+c.umugabeka@alustudent.com
+e.ben@alustudent.com
+=======
+f.kabeya@gmail.com
+f.kabeya@alustudent.com
+>>>>>>> ad8bcd9ff2d8ec8138d99b8c746921570874eedd
+>>>>>>> e73295253d4b1fb8eb7cda6b9c98b81f78f167d0
