@@ -1,14 +1,19 @@
 #!/bin/bash
 
-# Variables for remote server details
-HOST="64293e56bc62.3a2627c1.alu-cod.online"
-USERNAME="64293e56bc62"
-PASSWORD="328d3b338a4ced526c9a"
-REMOTE_DIR="/summative/1023-2024j"
-LOCAL_DIR="Negpod_24-q1" # Directory to be backed up
+# Remote server details
+REMOTE_USER="85c43418188e"
+REMOTE_HOST="85c43418188e.70681577.alu-cod.online"
+REMOTE_DIR="/summative/1023-2024"
 
-# Use rsync to backup the directory to the remote server
-rsync -avz -e "sshpass -p $PASSWORD ssh -o StrictHostKeyChecking=no" "$LOCAL_DIR" "$USERNAME@$HOST:$REMOTE_DIR"
+# Directory to be backed up
+LOCAL_DIR="Negpod_24-q1"
 
-echo "Backup completed successfully."
+# Perform backup
+rsync -avz --delete $LOCAL_DIR $REMOTE_USER@$REMOTE_HOST:$REMOTE_DIR
 
+# Check if rsync was successful
+if [ $? -eq 0 ]; then
+    echo "Backup successful."
+else
+    echo "Backup failed. Please check the logs."
+fi
